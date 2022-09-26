@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- bap er bank title  -->
     <title>Bap Er Bank</title>
 </head>
+
 <body>
-    <h1>THis is my <span>baper Bank</span>!</h1>
-    <div><input type="email" name="" id="email-field"></div>
-    <div><input type="password" name="" id="pass-field"></div>
+    <h1 class="text-3xl text-center w-4/5 mx-auto my-5">This is my <span>baper Bank</span>!</h1>
+    <div class="bg-green-500 p-10 w-4/5 mx-auto ">
+        <input class="w-4/5 px-2" type="email" name="" id="email-field" placeholder="Please Enter your Email">
+        <input class="w-4/5 my-2 px-2" type="password" name="" id="pass-field"  placeholder="your Password">
+        <button class="bg-amber-700 text-white block py-1 px-5 rounded-lg hover:bg-sky-700" id="submit-btn">Submit</button>
+    </div>
+
+    <script>
+        const btnSubmit = document.getElementById('submit-btn');
+        btnSubmit.addEventListener('click',function () 
+        {
+            console.log('button clicked');
+        const emailFieldValue = document.getElementById('email-field').value;
+        const passFieldValue = document.getElementById('pass-field').value;
+        if (emailFieldValue === 'ra@gmail.com' && passFieldValue == 123) {
+        console.log('email');
+        }
+            
+        })
+    </script>
 </body>
+
 </html>
