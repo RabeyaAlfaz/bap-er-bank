@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <h1 class="text-3xl text-center w-4/5 mx-auto my-5">This is my <span>baper Bank</span>!</h1>
+    <h1 class="text-3xl text-center w-4/5 mx-auto my-5">This is my <span class="text-orange-700">baper Bank</span>!</h1>
     <div class="bg-green-500 p-10 w-4/5 mx-auto ">
         <input class="w-4/5 px-2" type="email" name="" id="email-field" placeholder="Please Enter your Email">
         <input class="w-4/5 my-2 px-2" type="password" name="" id="pass-field"  placeholder="your Password">
@@ -27,9 +27,8 @@
         const emailFieldValue = document.getElementById('email-field').value;
         const passFieldValue = document.getElementById('pass-field').value;
         if (emailFieldValue === 'ra@gmail.com' && passFieldValue == 123) {
-        console.log('email');
+           window.location.href = 'bank.html';
         }
-            
         })
     </script>
 </body>
