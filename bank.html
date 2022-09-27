@@ -74,20 +74,20 @@
         console.log(balanceAmountValue);
 
         // deposite Amount Function
-        depositeBtn.addEventListener('click', function ()
-         {
+        depositeBtn.addEventListener('click', function () {
             const depositeField = document.getElementById('deposite-amount');
             const depoFieldValue = depositeField.value.length;
             if (depoFieldValue !== 0) {
                 const depoValue = parseInt(depositeField.value);
-                depoAmount.innerText = depoValue;
-                balanceAmountValue += depoValue;
-                balanceAmount.innerText = balanceAmountValue;
-                depositeField.value = '';
-
-            }
-            else
-            {
+                let depositeTotal = parseInt(depoAmount.innerText);
+                   depoAmount.innerText = depoValue;
+                    depositeTotal += depoValue;
+                    depoAmount.innerText = depositeTotal;
+                    balanceAmountValue += depoValue;
+                    balanceAmount.innerText = balanceAmountValue;
+                    depositeField.value = '';
+                           
+            } else {
                 alert('input field is empty');
             }
         })
@@ -96,7 +96,10 @@
         withdrawBtn.addEventListener('click', function () {
             const withdrawField = document.getElementById('withdraw-amount');
             const withdrawValue = parseInt(withdrawField.value);
-            withdrawAmount.innerText = withdrawValue;
+            let withdrawTotal = parseInt(withdrawAmount.innerText);
+            withdrawAmount.innerText =  withdrawValue;
+            withdrawTotal += withdrawValue;
+            withdrawAmount.innerText = withdrawTotal;
             console.log(withdrawValue);
             balanceAmountValue -= withdrawValue;
             balanceAmount.innerText = balanceAmountValue;
